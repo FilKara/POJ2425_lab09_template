@@ -40,46 +40,46 @@ public class MainProgram {
 
         /** ✅ Krok 4: Dodaj metodę getDictionaryValues() która zwraca listę DictionaryValue */
 
-//        List<DictionaryValue> dictionaryValues = reader.getDictionaryValues();
-//        if (dictionaryValues != null && dictionaryValues.size() == 10) {
-//            System.out.println("✅ Załadowano 10 rekordów z pliku CSV.");
-//        } else {
-//            System.out.println("❌ Czy dodałeś metodę getDictionaryValues() i poprawnie sparsowałeś dane?");
-//            return;
-//        }
+        List<DictionaryValue> dictionaryValues = reader.getDictionaryValues();
+        if (dictionaryValues != null && dictionaryValues.size() == 10) {
+            System.out.println("✅ Załadowano 10 rekordów z pliku CSV.");
+        } else {
+            System.out.println("❌ Czy dodałeś metodę getDictionaryValues() i poprawnie sparsowałeś dane?");
+            return;
+        }
 
         /** ✅ Krok 5: Stwórz klasę DictionaryCache jako Singleton i przekaż do niej dane */
 
-//        DictionaryCache cache = DictionaryCache.getInstance();
-//        if (cache != null) {
-//            cache.setItems(dictionaryValues);
-//            System.out.println("✅ Dane zapisane w cache.");
-//
-//            /** 🔍 Sprawdzenie: czy dane można pobrać z cache */
-//            List<DictionaryValue> cachedValues = cache.getItems();
-//            if (cachedValues != null && cachedValues.size() == 10) {
-//                System.out.println("✅ Dane poprawnie pobrane z cache (" + cachedValues.size() + " elementów).");
-//            } else {
-//                System.out.println("❌ Czy metoda getItems() w klasie DictionaryCache działa poprawnie?");
-//                return;
-//            }
-//        } else {
-//            System.out.println("❌ Czy poprawnie zaimplementowałeś klasę Singleton (DictionaryCache)?");
-//            return;
-//        }
+        DictionaryCache cache = DictionaryCache.getInstance();
+        if (cache != null) {
+            cache.setItems(dictionaryValues);
+            System.out.println("✅ Dane zapisane w cache.");
+
+            /** 🔍 Sprawdzenie: czy dane można pobrać z cache */
+            List<DictionaryValue> cachedValues = cache.getItems();
+            if (cachedValues != null && cachedValues.size() == 10) {
+                System.out.println("✅ Dane poprawnie pobrane z cache (" + cachedValues.size() + " elementów).");
+            } else {
+                System.out.println("❌ Czy metoda getItems() w klasie DictionaryCache działa poprawnie?");
+                return;
+            }
+        } else {
+            System.out.println("❌ Czy poprawnie zaimplementowałeś klasę Singleton (DictionaryCache)?");
+            return;
+        }
 
         /** ✅ Krok 6: Wątek odświeżający dane w tle (DictionaryCacheRefresher) */
         /** Dodaj do klasy DictionaryCacheRefresher logikę, która przy każdej aktualizacji danych
          * nie tylko wypisze liczbę rekordów, ale także pełną zawartość cache’a – linia po linii.
          */
         
-//        DictionaryCacheRefresher refresher = new DictionaryCacheRefresher();
-//        if (refresher != null) {
-//            refresher.start();
-//            System.out.println("✅ Wątek odświeżający został uruchomiony.");
-//        } else {
-//            System.out.println("❌ Czy stworzyłeś klasę dziedziczącą po Thread o nazwie DictionaryCacheRefresher?");
-//        }
+        DictionaryCacheRefresher refresher = new DictionaryCacheRefresher();
+        if (refresher != null) {
+            refresher.start();
+            System.out.println("✅ Wątek odświeżający został uruchomiony.");
+        } else {
+            System.out.println("❌ Czy stworzyłeś klasę dziedziczącą po Thread o nazwie DictionaryCacheRefresher?");
+        }
 
         /** 📝 Uwaga dla studentów:
          * Po uruchomieniu aplikacji spróbuj ręcznie zmodyfikować plik 'dictionaries.csv'
