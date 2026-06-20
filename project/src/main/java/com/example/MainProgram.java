@@ -10,33 +10,33 @@ public class MainProgram {
     public static void main(String[] args) {
         /** ✅ Krok 1: Utwórz klasę DictionaryValue z odpowiednimi polami i metodami */
 
-//        DictionaryValue testValue = new DictionaryValue(1, 2, "POM", "Region", "Woj. Pomorskie");
-//        if (testValue != null && testValue.getIntKey() == 2 && "POM".equals(testValue.getStringKey())) {
-//            System.out.println("✅ DictionaryValue utworzony poprawnie: " + testValue);
-//        } else {
-//            System.out.println("❌ Sprawdź konstruktor oraz gettery/settery w klasie DictionaryValue.");
-//            return;
-//        }
+        DictionaryValue testValue = new DictionaryValue(1, 2, "POM", "Region", "Woj. Pomorskie");
+        if (testValue != null && testValue.getIntKey() == 2 && "POM".equals(testValue.getStringKey())) {
+            System.out.println("✅ DictionaryValue utworzony poprawnie: " + testValue);
+        } else {
+            System.out.println("❌ Sprawdź konstruktor oraz gettery/settery w klasie DictionaryValue.");
+            return;
+        }
 
         /** ✅ Krok 2: Utwórz klasę DictionaryFileReader, która odczytuje dane z pliku CSV */
 
-//        DictionaryFileReader reader = new DictionaryFileReader("src/main/resources/dictionaries.csv");
-//        if (reader != null) {
-//            System.out.println("✅ Reader zainicjalizowany.");
-//        } else {
-//            System.out.println("❌ Czy stworzyłeś klasę DictionaryFileReader z odpowiednim konstruktorem?");
-//            return;
-//        }
+        DictionaryFileReader reader = new DictionaryFileReader("src/main/resources/dictionaries.csv");
+        if (reader != null) {
+            System.out.println("✅ Reader zainicjalizowany.");
+        } else {
+            System.out.println("❌ Czy stworzyłeś klasę DictionaryFileReader z odpowiednim konstruktorem?");
+            return;
+        }
 
         /** ✅ Krok 3: Dodaj metodę getRawFileData() do klasy reader */
 
-//        String rawData = reader.getRawFileData();
-//        if (rawData != null && rawData.contains("Region")) {
-//            System.out.println("Zawartość pliku:\n" + rawData);
-//        } else {
-//            System.out.println("❌ Czy dodałeś metodę getRawFileData()? Czy poprawnie wczytuje dane z pliku?");
-//            return;
-//        }
+        String rawData = reader.getRawFileData();
+        if (rawData != null && rawData.contains("Region")) {
+            System.out.println("Zawartość pliku:\n" + rawData);
+        } else {
+            System.out.println("❌ Czy dodałeś metodę getRawFileData()? Czy poprawnie wczytuje dane z pliku?");
+            return;
+        }
 
         /** ✅ Krok 4: Dodaj metodę getDictionaryValues() która zwraca listę DictionaryValue */
 
